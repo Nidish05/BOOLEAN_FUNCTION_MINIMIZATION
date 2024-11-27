@@ -37,27 +37,32 @@ Hardware – PCs, Cyclone II , USB flasher
 ```
 Developed by:Nidishkumar S
 RegisterNumber:24002777
-module exp21(a,b,c1,c2,c3,c4,c5,c6,c7);
-input a,b;
-output c1,c2,c3,c4,c5,c6,c7;
-not y1(c1,a);
-and y2(c2,a,b);
-or y3(c3,a,b);
-nand y4(c4,a,b);
-nor y5(c5,a,b);
-xor y6 (c6,a,b);
-xnor y7(c7,a,b);
+module experiment2(a,b,c,d,f1);
+input a,b,c,d;
+output f1;
+assign f1=((~b & ~d)|(~a & b & d)|(a & b & ~c));
+endmodule
+
+module experiment2(w,x,y,z,f2);
+input w,x,y,z;
+output f2;
+assign f2=((~y & z)|( w & y )|(x & y));
 endmodule
 ```
 
 **RTL realization**
+![k](https://github.com/user-attachments/assets/e0e5ddc4-e4b1-44a0-bd28-f5cefe899652)
 
-![Screenshot 2024-11-14 161250](https://github.com/user-attachments/assets/5bfedb33-6b87-496e-a961-e89f43e605c8)
+![WhatsApp Image 2024-11-27 at 13 45 18_d34e8cbf](https://github.com/user-attachments/assets/136713b6-2e6e-4114-9cda-10771a3d5a2f)
+
+
 
 
 
 **Timing Diagram**
-![Screenshot 2024-11-14 160934](https://github.com/user-attachments/assets/8fd61839-98c6-4c9b-a688-a72cdd579612)
+![WhatsApp Image 2024-11-27 at 13 45 19_3884be46](https://github.com/user-attachments/assets/1c789023-79db-458f-9120-e1d6288cb20f)
+
+![WhatsApp Image 2024-11-27 at 13 45 18_98996925](https://github.com/user-attachments/assets/9865c7ac-a67c-42e3-bf28-370a6e10d88d)
 
 **Result:**
 
